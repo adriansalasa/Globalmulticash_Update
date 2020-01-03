@@ -460,15 +460,42 @@ pre {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
+
+  @media (min-width: 370px) {
+    .container {
+      max-width: 340px; }  
+
+    #psTitle{
+      margin-bottom: -20px;
+    }
+
+    #srcGmbar{
+      width: 170px;
+      height: 170px;       
+    }         
+  }
+
   @media (min-width: 576px) {
     .container {
-      max-width: 540px; } }
+      max-width: 540px; } 
+    
+    #srcGmbar{
+      width: 300px;
+      height: 300px; }         
+    }
+
   @media (min-width: 768px) {
     .container {
       max-width: 720px; } }
   @media (min-width: 992px) {
     .container {
-      max-width: 960px; } }
+      max-width: 960px; }
+      
+      #srcGmbar{
+        width: 500px;
+        height: 500px; }  
+       }
+
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
@@ -1558,10 +1585,44 @@ pre {
 .btncontrol{
   width: 35%;
   margin-left: 200px;  
-}    
+} 
+
+#sTitle{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 350;
+}
+
+
+
 
 .errRequired{
   color: red;
+}
+
+.rLayan{
+  margin-bottom: 80px;
+}
+
+#pHAbout{
+  font-family: "Work Sans";
+  /*font-style: normal;*/
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.pJdlText{
+  font-family: "Work Sans";
+  /*font-style: normal;*/
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.tjdlH{
+  font-family: "Work Sans";
+  /*font-style: normal;*/
+  font-size: 50px;
+  font-weight: 600;
 }
 
 .btnCfm{
@@ -1582,36 +1643,43 @@ pre {
   color: white; 
 }
 
-.selLang .Eng{  
+.selLang .Ind{  
   border: 1px solid;
   border-radius: 15px;
-  border-color: white;
+  border-color: lightskyblue;
   background-color: lightskyblue;  
   list-style-type: none;  
-  width: 30px;    
+  width: 30px; 
+  height: 30px;     
   position: relative;
 }
 
 .trans{
   margin-top: 12px;
+  width: 1px
+}
+
+.selLang{
+   margin-top: 2px;
 }
 
 .selLang  a{    
   padding: 3px;
 }
 
-.selLang .Eng  a{    
+.selLang .Ind  a{    
   color: #ffffff;
 }
 
-.selLang .Ind{
+.selLang .Eng{
   border: 1px solid;
   border-radius: 15px;
   border-color: white;  
   background-color: white;  
   color: lightskyblue;
   list-style-type: none;  
-  width: 30px;
+  width: 30px; 
+  height: 30px;   
   display: none;
   position: absolute;
 }
@@ -1623,7 +1691,8 @@ pre {
   background-color: white;  
   color: lightskyblue;
   list-style-type: none;  
-  width: 30px;
+  width: 30px; 
+  height: 30px;   
   display: block;
   position: relative;
 }
@@ -1633,11 +1702,86 @@ pre {
   border-radius: 15px;
   border-color: white;  
   background-color: white;  
+  /*color: lightskyblue;*/
+  list-style-type: none;  
+  width: 30px; 
+  height: 30px;   
+  display: none;
+  position: relative;
+}
+
+.Eng2Chg{
+  border: 1px solid;
+  border-radius: 15px;
+  border-color: lightskyblue;  
+  background-color: lightskyblue;    
+  list-style-type: none;  
+  width: 30px; 
+  height: 30px;   
+  display: none;
+  position: relative;
+}
+
+.selLang .Eng2Chg  a{    
+  color: #ffffff;
+}
+
+.engblue{
+  border: 1px solid;
+  border-radius: 15px;
+  border-color: lightskyblue;
+  background-color: lightskyblue;  
+  list-style-type: none;  
+  width: 30px; 
+  height: 30px;     
+  position: relative;  
+}
+
+.selLang .engblue  a{    
+  color: #ffffff;
+}
+
+.IndShadow{
+  border: 1px solid;
+  border-radius: 15px;
+  border-color: white;  
+  background-color: white;  
   color: lightskyblue;
   list-style-type: none;  
-  width: 30px;
-  display: block;
+  width: 30px; 
+  height: 30px;   
+  display: none;
   position: absolute;
+}
+
+.IndShadowRel{  
+  border: 1px solid;
+  border-radius: 15px;
+  border-color: lightskyblue;
+  background-color: lightskyblue;  
+  list-style-type: none;  
+  width: 30px; 
+  height: 30px;   
+  display: none;  
+  position: relative;
+}
+
+.selLang .IndShadowRel  a{    
+  color: #ffffff;
+}
+
+#Eng2{
+  border: 1px solid;
+  border-radius: 15px;
+  background-color: white; 
+  list-style-type: none;  
+  width: 30px; 
+  height: 30px; 
+  position: absolute;     
+}
+
+#Eng2 a{
+   padding: 7px;
 }
 
 .isiContactUS{
@@ -7839,8 +7983,8 @@ h1, h2, h3, h4, h5,
   font-size: 17px; }
 
 .rowapply{
-  margin-left: 120px;
-  margin-top: 60px;    
+ /* margin-left: 120px;*/
+  margin-top: 60px;      
 }
 
 .btnApply{
@@ -7951,7 +8095,17 @@ h1, h2, h3, h4, h5,
     padding: 2em 0; 
     background: #78d5ef; }
     .ftco-section-parallax .parallax-img.parallax-img-2 {
-      background: #ee76ad; }      
+      background: #ee76ad; }
+
+.ftco-section-parallax-about {
+  position: relative; }
+  .ftco-section-parallax-about .parallax-img-about {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    padding: 2em 0; 
+    background: #ee76ad; }      
 
 .block-3 .text, .block-3 .image {
   width: 100%;
@@ -8354,7 +8508,7 @@ textarea.form-control {
     font-family: "Work Sans";
     font-size: 15px;
     letter-spacing: 1px;    
-    color: white;
+    color: white;    
     margin-left: 100px;
     margin-right: 100px;
     font-weight:200px;
@@ -9127,3 +9281,4 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+

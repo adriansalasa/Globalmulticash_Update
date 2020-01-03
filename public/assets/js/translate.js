@@ -1,68 +1,97 @@
-$('.Eng').click(function(){  
-        $('.Ind').show();               
-        $('.Ind').addClass('selShow')
-        // $('#hidTranslate').val("0");
-      });
+    // $('#hm').click(function(){
+    //     if ($('#hidTranslate').val() == "0"){
+    //         location.reload(true);
+    //     }else{
+    //         toEng();
+    //     }
+    // });
 
-$('.Ind').click(function(){        
-        $('.Ind').removeClass('Ind')                
-        $('.Eng').hide();                   
-        // $('.Eng').remove();
-        translateToIndo(); 
-        // $('#hidTranslate').val("1");            
-      });
-       
-function translateToIndo(){
-    // Translate Navbar
-        $('#hm').html("Halaman Utama")
-        $('#svc').html("Layanan Kami")
-        $('#happly').html("Cara Daftar")
-        $('#cntUS').html("Hubungi Kami")
-        $('#abtUS').html("Tentang kami")
+    $('.Ind').click(function(){      
+        $('.Eng').show();               
+        $('.Eng').addClass('Eng2');          
+        $('#hidTranslate').val("0");                     
+    });
+    
+    $('.Eng').click(function(){                
+        if ( $('#hidTranslate').val() == "1"){                                              
+            $('.selLang').append('<li class = "IndShadow text-center"><a href="#">ID</a></li> ');                          
+            $('.IndShadow').show();   
+            
+            $('.IndShadow').click(function(){   
+                $('.IndShadow').addClass('IndShadowRel'); 
+                $('.IndShadow').removeClass('IndShadow');
+                $('.IndShadowRel').show();
+                $('.engblue').hide();
+               location.reload(true);
+            });          
+        }else{
+            $('#hidTranslate').val("1");                
+            $('.Ind').remove();                
+            $('.Eng').removeClass('Eng2');
+            $('.Eng').addClass('engblue'); 
+            $('.Eng').removeClass('Eng');
+            $('.engblue').show();        
+            translateToEng();                 
+        }
+    });
 
-        // Translate SubJudul ke 1
-        $('#sTitle').html("Solusi Masalah Keuangan anda")
-        $('#psTitle').html("Kami dapat membantu masalah keuangan anda dengan memberikan penawaran pinjaman cepat dengan bunga rendah. Kami menawarkan pinjaman mulai dari Rp. 500.000 - Rp. 60.000.000.")
+        // $('.Eng3').click(function(){           
+        //     // $('.selLang').append('<li class = "Ind"><a href="#">Ind</a></li> ');  
+        //     alert("tes2");
+        // });
+         
+    function translateToEng(){
+        // Translate Navbar
+            $('#hm').html("Home")
+            $('#svc').html("Our Services") 
+            $('#happly').html("How To Apply")
+            $('#cntUS').html("Contact Us")
+            $('#abtUS').html("About Us")
 
-        // Translate SubJudul Our Services
-        $('#sHOS').html("Layanan Kami")
-        $('#pOSH2').html("Kami memberi anda kemudahan akses pinjaman dengan bunga yang rendah")
+            // Translate SubJudul ke 1
+            $('#sTitle').html("Your Financial Problem Solution")
+            $('#psTitle').html("We can help your financial problem by offering the Quick Loans with low interest. We offer loans from Rp. 500.000 - Rp. 60.000.000. Once it Approved your loan send to your Bank Account directly.")
 
-        $('#sHSecure').html("Keamanan Tingkat Tinggi")
-        $('#pHSecure').html("Dengan menggunakan teknologi Enkripsi tingkat tinggi kami akan melidungi data pribadi anda dan tidak akan menyebarkannya kepada siapapun.")
+            // Translate SubJudul Our Services
+            $('#sHOS').html("Our Services")
+            $('#pOSH2').html("We give you easy access to Loan with low interest !")
 
-        $('#sH24CS').html("Layanan Informasi 24 Jam")
-        $('#pH24CS').html("Kami menyediakan layanan informasi yang handal selama 24 jam. Jika ada keluhan atau ada ingin ditanyakan jangan ragu untuk hubungi kami.")
+            $('#sHSecure').html("High Security")
+            $('#pHSecure').html("By Using High Security Technology Encryption. We will surely to protect your privacy and would never disclose any personal information to anyone.")
 
-        $('#sHFE').html("Cepat dan Mudah")        
-        $('#pHFE').html("Layanan yang cepat dan Proses Approve yang cepat. Anda bisa dapatkan total uang sebesar Rp. 60.000.000 dalam 1 jam")
+            $('#sH24CS').html("24 Hour Customer Service")
+            $('#pH24CS').html("We are here to provide 7*24 hour high-quality customer service. If you had any questions or obstacles, do not hesitate to contact us.")
 
-        $('#sHLowIn').html("Tingkat Bunga Rendah")
-        $('#pHLowIn').html("Kami menawarkan anda pinjaman dengan bunga rendah mulai dari 0.05%. Jangka waktu peminjaman bervariasi mulai dari 3-5 Tahun dan pengembalian pinjaman bisa dicicil per Minggu, per dua minggu, atau per bulan")
+            $('#sHFE').html("Fast & Easy")        
+            $('#pHFE').html("Fast & easy to Approve. You can get up to 60,000,000 Rp in hour.")
 
-        $('#sHHapp').html("Bagaimana cara pendaftarannya")
-        $('#pSHapp').html("Langkah sederhana untuk mendaftar")
+            $('#sHLowIn').html("Low Interest")
+            $('#pHLowIn').html("We offer a low interest personal loan starting 0.05% p.a. The loan term varies from 3-5 years and the repayments can be made weekly, fortnightly or monthly")
 
-        $('#pHFReg').html("Isi form")
-        $('#pHWav').html("Tunggu konfirmasi")
-        $('#pHGL').html("Pinjaman cair")
+            $('#sHHapp').html("How to Apply...??")
+            $('#pSHapp').html("Simple Step to Apply")
 
-        // $('#pBtnApply').html("Daftar Sekarang")        
+            $('#pHFReg').html("1. Fill your personal data in registration form")
+            $('#pHWav').html("2. Wait for admin Verification")
+            $('#pHGL').html("3. Get your money")
 
-        // Translate SubJudul Contact US
-        $('#HConUS').html("Hubungi Kami")        
-        $('#lblUsrNm').html("Nama Pengguna")
-        $('#txtUsrName').attr("placeholder", "Masukan Nama Anda...")
-        $('#lblEmail').html("Alamat Email")
-        $('#txtsEmail').attr("placeholder", "Masukan alamat Email Anda...")
-        $('#lblPhone').html("Nomor Telpon")
-        $('#txtsTelp').attr("placeholder", "Masukan nomor Telpon Anda...")
-        $('#lblMessage').html("Tulis Pesan")
-        $('#txtsmsg').attr("placeholder", "Tulis pesan yang akan anda sampaikan...") 
-        $('#btn_post_Verify').html("Kirim")   
-        $('#btnReset').html("Batalkan")
+            // $('#pBtnApply').html("Daftar Sekarang")        
 
-        // Translate SubJudul About US
-        $('#HAbout').html("Tentang Kami")
-        $('#pHAbout').html("Global Multicash adalah platform berbasis technology informasi yang dijalankan oleh Sembilan Bola Dunia yang mengedepankan perlindungan konsumen dan memiliki risiko yang terkelola dengan baik")
-}
+            // Translate SubJudul Contact US
+            $('#HConUS').html("Contact us")        
+            $('#lblUsrNm').html("Username")
+            $('#txtUsrName').attr("placeholder", "Type your Username...")
+            $('#lblEmail').html("Email")
+            $('#txtsEmail').attr("placeholder", "Type your Email Address...")
+            $('#lblPhone').html("Phone")
+            $('#txtsTelp').attr("placeholder", "Type your phone number...")
+            $('#lblMessage').html("Message")
+            $('#txtsmsg').attr("placeholder", "Type your message...") 
+            $('#btn_post_Verify').html("Submit")   
+            $('#btnReset').html("Reset")
+
+            // Translate SubJudul About US
+            $('#HAbout').html("About Us")
+            $('#pHAbout').html("Global Multicash is Information technology platform which managed by Sembilan Bola Dunia that has priority to protect their consumer's security from High Risk")
+    }
+

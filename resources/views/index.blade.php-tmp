@@ -1,133 +1,152 @@
 @extends('layout.main')
 
-@section('title', 'Eazy Money')
+@section('title', 'Global Multicash')
 
 @section('container')
 
 	<div class="container-fluid">
 
-		<section class="home-slider ftco-degree-bg">
+		<section class="home-slider home ftco-degree-bg">
 	      <div class="slider-item">
 	        <div class="overlay"></div>
 	        <div class="container">
 	          <div class="row slider-text align-items-center justify-content-center">
-	            <div class="col-md-10 text-center">
-	              <h1 class="mb-4">Your Money Problem Solution
-	                <!-- <strong class="typewrite" data-period="4000" data-type='[ "Develop.", "Design.", "Explore.", "Capture." ]'>
-	                  <span class="wrap"></span>
-	                </strong> -->
-	              </h1>
-	              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias impedit, fugit veniam unde placeat, dolor fuga! Architecto libero impedit omnis rem molestiae quasi voluptatem, maxime qui hic commodi!</p>
-	              <!-- <p><a href="https://vimeo.com/45830194" class="btn btn-primary btn-outline-white px-4 py-3 popup-vimeo"><span class="ion-ios-play mr-2"></span> Watch Video</a></p> -->
-	              <!-- <img src="{{asset('assets/img/happyman1.png')}}" alt="happy man" class="img-fluid"> -->
-	            </div>
+              <div class="col-md-5 fiProb">
+                <input type="hidden" id="hidTranslate">
+                <h1 class="mb-4" id="sTitle">Solusi Masalah Keuangan anda</h1>
+                <p id="psTitle">Kami dapat membantu masalah keuangan anda dengan memberikan penawaran pinjaman cepat dengan bunga rendah. Kami menawarkan pinjaman mulai dari Rp. 500.000 - Rp. 60.000.000. </p>
+              </div>
+
+              <div class="col-md-7 imgCover">
+                  <!-- <img class="img-fluid" src="{{asset('assets/img/res_happyman.png')}}" alt="Res_Global multicash" > -->
+                  <img src="{{asset('assets/img/Res_Global multicash2_opacity.png')}}" alt="Res_Global multicash"  id="srcGmbar">
+              </div>
+
 	          </div>
 	        </div>
 	      </div>
-	    </section>
+	  </section>
 
-	<section class="ftco-section ftco-degree-bg">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 text-center heading-section ">
-            <span class="subheading">Our Services</span>
-            <h2>We give you easy access to Loan with low interest !</h2>
+  	<section class="ftco-section ourservices ftco-degree-bg" id="ourservices">
+        <div class="container">
+          <div class="row justify-content-center rLayan pb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate ">
+              <span class="subheading" id="sHOS">Layanan Kami</span>
+              <h2 id="pOSH2">Kami memberi anda kemudahan akses pinjaman dengan bunga yang rendah !</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate ">
+              <div class="media block-6 services d-block text-center">
+                <div class="d-flex justify-content-center"><div class="icon color-1 d-flex justify-content-center mb-3"><span class="align-self-center">
+                  <img src="{{asset('assets/img/high_security.png')}}" width="90px" height="90px" alt="">
+                </span></div></div>
+                <div class="media-body p-2">
+                  <h3 class="heading tjdlH" id="sHSecure">Keamanan Tingkat Tinggi</h3>
+                  <p id="pHSecure" class="pJdlText">Dengan menggunakan teknologi Enkripsi tingkat tinggi kami akan melidungi data pribadi anda dan tidak akan menyebarkannya kepada siapapun.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services d-block text-center">
+                <div class="d-flex justify-content-center"><div class="icon color-2 d-flex justify-content-center mb-3"><span class="align-self-center">
+                  <img src="{{asset('assets/img/call_center24_New.png')}}" width="120px" height="120px" alt="">
+                </span></div></div>
+                <div class="media-body p-2">
+                  <h3 class="heading tjdlH" id="sH24CS">Layanan Informasi 24 Jam</h3>
+                  <p id="pH24CS" class="pJdlText">Kami menyediakan layanan informasi yang handal selama 24 jam. Jika ada keluhan atau ada ingin ditanyakan jangan ragu untuk hubungi kami.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services d-block text-center">
+                <div class="d-flex justify-content-center"><div class="icon color-1 d-flex justify-content-center mb-3"><span class="align-self-center">
+                  <img src="{{asset('assets/img/fast_run2.png')}}" width="90px" height="90px" alt="">
+                </span></div></div>
+                <div class="media-body p-2">
+                  <h3 class="heading tjdlH" id="sHFE">Cepat dan Mudah</h3>
+                  <p id="pHFE" class="pJdlText">Layanan yang cepat dan Proses Approve yang cepat. Anda bisa dapatkan total uang sebesar Rp. 60.000.000 dalam 1 jam.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+              <div class="media block-6 services d-block text-center">
+                <div class="d-flex justify-content-center"><div class="icon color-2 d-flex justify-content-center mb-3"><span class="align-self-center">
+                  <img src="{{asset('assets/img/zeroPercent3.png')}}" width="140px" height="140px" alt="">
+                </span></div></div>
+                <div class="media-body p-2">
+                  <h3 class="heading tjdlH" id="sHLowIn">Tingkat Bunga Rendah</h3>
+                  <p id="pHLowIn" class="pJdlText">Kami menawarkan anda pinjaman dengan bunga rendah mulai dari 0.05%. Jangka waktu peminjaman bervariasi mulai dari 3-5 Tahun dan pengembalian pinjaman bisa dicicil per Minggu, per dua minggu, atau per bulan</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-1 d-flex justify-content-center mb-3"><span class="align-self-center icon-security"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">High Security</h3>
-                <p>With High Security Technology Encryption. We will surely to protect your privacy and would never disclose any personal information to anyone.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-2 d-flex justify-content-center mb-3"><span class="align-self-center icon-clock-o"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">24 Hour Customer Service</h3>
-                <p>We are here to provide 7*24 hour high-quality customer service. If you had any questions or obstacles, do not hesitate to contact us.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3"><span class="align-self-center icon-plane"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Fast & Easy</h3>
-                <p>Fast & easy to Approve. You can get up to 6,000,000 Rp in hour.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-self-stretch ">
-            <div class="media block-6 services d-block text-center">
-              <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-credit-card-alt"></span></div></div>
-              <div class="media-body p-2">
-                <h3 class="heading">Low Interest</h3>
-                <p>We offer a low interest personal loan starting 8.50% p.a. The loan term varies from 3-5 years and the repayments can be made weekly, fortnightly or monthly</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="ftco-section-parallax ftco-degree-bg">
+    <section class="ftco-section-parallax apply ftco-degree-bg" id="apply">
       <div class="parallax-img d-flex align-items-center">
         <div class="container">
           <div class="row d-flex justify-content-center">
-            <div class="col-md-10 text-center heading-section heading-section-white ">
-              <h2 class="h1 font-weight-bold hwAply">How to Apply ?</h2>
+            <div class="col-md-10 text-center heading-section heading-section-white ftco-animate mt-5 ">
+              <span class="subheading" id="sHHapp">Bagaimana cara pendaftarannya</span>
+              <h2 id="pSHapp"> Langkah sederhana untuk mendaftar</h2>
 
- 			 <div class="row rowapply" id="rmargin">
-	          <div class="col-md-2 d-flex align-self-stretch ">
-	            <div class="media block-6 services d-block text-center">
-	              <div class="d-flex justify-content-center"><div class="icon color-1 d-flex justify-content-center mb-3"><span class="align-self-center icon-vcard-o"></span></div></div>
-	              <div class="media-body p-2">
-	                <h3 class="heading text-white">Registration</h3>
-	              </div>
-	            </div>
-	          </div>
+         			 <div class="row rowapply" id="rmargin">
+                <div class="col-md-offset-1"></div>
+      	          <div class="col-md-2 d-flex align-self-stretch ftco-animate">
+      	            <div class="media block-6 services d-block text-center">
+      	              <div class="d-flex justify-content-center"><div class="icon color-1 d-flex justify-content-center mb-3"><span class="align-self-center icon-vcard"></span></div></div>
+      	              <div class="media-body p-2">
+      	                <h3 class="heading text-white" id="pHFReg">Isi form</h3>
+      	              </div>
+      	            </div>
+      	          </div>
 
-	          <div class="col-md-2 d-flex align-self-stretch ">
-	            <div class="media block-6 services d-block text-center">
-	              <div class="d-flex justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-angle-double-right"></span></div></div>
-	            </div>
-	          </div>
+      	          <div class="col-md-2 d-flex align-self-stretch ftco-animate">
+      	            <div class="media block-6 services d-block text-center">
+      	              <div class="d-flex justify-content-center"><div class="icon color-2 d-flex justify-content-center mb-3"><span class="align-self-center icon-long-arrow-right"></span></div></div>
+      	            </div>
+      	          </div>
+                  <!-- <div class="col-md-offset-1"></div> -->
 
-	          <div class="col-md-2 d-flex align-self-stretch  ">
-	            <div class="media block-6 services d-block text-center">
-	              <div class="justify-content-center"><div class="icon color-2 d-flex justify-content-center mb-3"><span class="align-self-center icon-check"></span></div></div>
-	              <div class="media-body p-2">
-	                <h3 class="heading text-white"> Validation</h3>
-	              </div>
-	            </div>
-	          </div>
+      	          <div class="col-md-2 d-flex align-self-stretch  ftco-animate">
+      	            <div class="media block-6 services d-block text-center">
+      	              <div class="justify-content-center"><div class="icon color-3 d-flex justify-content-center mb-3 "><span class="align-self-center icon-check"></span></div></div>
+      	              <div class="media-body p-2">
+      	                <h3 class="heading text-white" id="pHWav">Tunggu konfirmasi</h3>
+      	              </div>
+      	            </div>
+      	          </div>
 
-	          <div class="col-md-2 d-flex align-self-stretch ">
-	            <div class="media block-6 services d-block text-center">
-	              <div class="justify-content-center"><div class="icon color-4 d-flex justify-content-center mb-3"><span class="align-self-center icon-angle-double-right"></span></div></div>
-	            </div>
-	          </div>
+      	          <div class="col-md-2 d-flex align-self-stretch ftco-animate">
+      	            <div class="media block-6 services d-block text-center">
+      	              <div class="justify-content-center">
+                        <div class="icon color-2 d-flex justify-content-center mb-3">
+                          <span class="align-self-center icon-long-arrow-right"></span>
+                        </div></div>
+      	            </div>
+      	          </div>
 
-	          <div class="col-md-2 d-flex align-self-stretch ">
-	            <div class="media block-6 services d-block text-center">
-	              <div class="d-flex justify-content-center">
-	              	<div class="icon color-2 d-flex justify-content-center mb-3">
-	              		<span class="align-self-center icon-dollar"></span>
-	              	</div>
-	              </div>
-	              <div class="media-body p-2">
-	                <h3 class="heading text-white">Get the Loan</h3>
-	              </div>
-	            </div>
-	          </div>
-        </div>
-              <p><a href="#" class="btn btn-primary btn-outline-white py-3 px-4 btnApply">Apply Now</a></p>
+      	          <div class="col-md-2 d-flex align-self-stretch ftco-animate">
+      	            <div class="media block-6 services d-block text-center">
+      	              <div class="d-flex justify-content-center">
+      	              	<div class="icon color-2 d-flex justify-content-center mb-3">
+      	              		<!-- <span class="align-self-center icon-dollar"></span> -->
+                          <span><img class="img-fluid" src="{{asset('assets/img/moneyRp.png')}}" alt=""></span>
+      	              	</div>
+      	              </div>
+      	              <div class="media-body p-2">
+      	                <h3 class="heading text-white" id="pHGL">Pinjaman cair</h3>
+      	              </div>
+      	            </div>
+      	          </div>
+                  <div class="col-md-offset-1"></div>
+
+               </div>
+
+            <!--   <p class="ftco-animate mt-3"><a href="#" class="btn btn-primary btn-outline-white py-3 px-4 btnApply" id="pBtnApply">Apply Now</a></p> -->
             </div>
           </div>
 	     <div class="parallax-img d-flex align-items-center">
@@ -136,90 +155,86 @@
       </div>
     </section>
 
-	<section class="isiContactUS">
-		<div class="container">
-  		<div class="d-flex justify-content-center"></div>
-      <div class="row">
-        <div class="col-12 col-md-12 col-lg-12">
-          <div class="card shadow p-2 mb-3 bg-white rounded">
-          	<div class="col-md-12 text-center heading-section mt-3">
-  					<h1 class="subheading scontact">contact us</h1>
-            <div class="card-body">
-              <form method="POST" action="/pay_verify" name="post_Verify" enctype="multipart/form-data">
-              @csrf
-                <div class="form-group row">
-                  <label for="txtUsrName" class="col-sm-2 ml-4 col-form-label" >Username
-                    <span class="errRequired">*</span>
-                  </label>
-                     <div class="col-sm-8">
-                        <input type="text" name="txtUsrName" id="txtUsrName" class="form-control @error('txtUsrName') is-invalid @enderror" placeholder = "masukan username anda..." >
-                        @error('txtUsrName')<div class="invalid-feedback">{{ 'Tolong isi Email anda..!'}}</div>@enderror
+  	<section class="isiContactUS" id="isiContactUS">
+  		<div class="container">
+    		<div class="d-flex justify-content-center"></div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-12">
+            <div class="card shadow p-1 mb-3 bg-white rounded">
+            	<div class="col-md-12 text-center heading-section mt-3 ftco-animate">
+                <div class="card-header headContact">
+      					   <h1 class="scontact" id="HConUS">Hubungi Kami</h1>
+                </div>
+                <div class="card-body">
+                  <form method="POST" action="/pay_verify" name="post_Verify" enctype="multipart/form-data">
+                  @csrf
+                    <div class="form-group row ftco-animate">
+                      <label for="txtUsrName" class="col-sm-2 ml-4 col-form-label" id="lblUsrNm" >Nama Pengguna
+                        <span class="errRequired">*</span>
+                      </label>
+                       <div class="col-sm-8">
+                          <input type="text" name="txtUsrName" id="txtUsrName" class="form-control @error('txtUsrName') is-invalid @enderror" placeholder = "Masukan Nama Anda..." >
+                          @error('txtUsrName')<div class="invalid-feedback">{{ 'Tolong Masukan Nama Anda.....!'}}</div>@enderror
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="form-group row">
-                    <label for="txtsEmail" class="col-sm-2 ml-4 col-form-label" >Email
-                      <span class="errRequired">*</span>
-                    </label>
-                    <div class="col-sm-8">
-                        <input type="text" name="txtsEmail" id="txtsEmail" class="form-control @error('txtsEmail') is-invalid @enderror" placeholder="masukan alamat email anda... " style="background-color: #e8f0fd" value="{{old('txtsEmail')}}">
-                         @error('sEmail')<div class="invalid-feedback">{{ 'Tolong isi Email anda..!'}}</div>@enderror
+                    <div class="form-group row ftco-animate">
+                      <label for="txtsEmail" class="col-sm-2 ml-4 col-form-label" id="lblEmail" >Email
+                        <span class="errRequired">*</span>
+                      </label>
+                      <div class="col-sm-8">
+                          <input type="text" name="txtsEmail" id="txtsEmail" class="form-control @error('txtsEmail') is-invalid @enderror" placeholder="Masukan alamat Email Anda... " style="background-color: #e8f0fd" value="{{old('txtsEmail')}}">
+                           @error('sEmail')<div class="invalid-feedback">{{ 'Tolong Masukan alamat Email Anda...!'}}</div>@enderror
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="form-group row">
-                      <label for="txtsTelp" class="col-sm-2 ml-4 col-form-label" >No. Telp
+                    <div class="form-group row ftco-animate">
+                      <label for="txtsTelp" class="col-sm-2 ml-4 col-form-label" id="lblPhone" >Nomor Telpon
                             <span class="errRequired">*</span>
                       </label>
                       <div class="col-sm-8">
-                          <input type="text" name="txtsTelp" id="txtsTelp" class="form-control @error('txtsTelp') is-invalid @enderror" placeholder="masukan nomer telpon anda..." style="background-color: #e8f0fd" value="{{old('txtsTelp')}}">
-                          @error('txtsTelp')<div class="invalid-feedback">{{ 'Tolong nomor telpon anda..!'}}</div>@enderror
+                          <input type="text" name="txtsTelp" id="txtsTelp" class="form-control @error('txtsTelp') is-invalid @enderror" placeholder="Masukan nomor Telpon Anda..." style="background-color: #e8f0fd" value="{{old('txtsTelp')}}">
+                          @error('txtsTelp')<div class="invalid-feedback">{{ 'Tolong Masukan nomor Telpon Anda...!'}}</div>@enderror
                       </div>
-                  </div>
+                    </div>
 
-                  <div class="form-group row">
-                      <label for="txtsmsg" class="col-sm-2 ml-4 col-form-label" >Pesan
+                    <div class="form-group row ftco-animate">
+                      <label for="txtsmsg" class="col-sm-2 ml-4 col-form-label" id="lblMessage" >Tulis Pesan
                             <span class="errRequired">*</span>
                       </label>
                       <div class="col-sm-8">
-                          <textarea name="txtsmsg" id="txtsmsg" class="form-control @error('txtsmsg') is-invalid @enderror" placeholder="masukan pesan yang akan disampaikan..." style="background-color: #e8f0fd" value="{{old('txtsmsg')}}"></textarea>
-                          @error('txtsmsg')<div class="invalid-feedback">{{ 'Harap isi pesan yang akan disampaikan..!'}}</div>@enderror
+                          <textarea name="txtsmsg" id="txtsmsg" class="form-control @error('txtsmsg') is-invalid @enderror" placeholder="Tulis pesan yang akan anda sampaikan..." style="background-color: #e8f0fd" value="{{old('txtsmsg')}}"></textarea>
+                          @error('txtsmsg')<div class="invalid-feedback">{{ 'Tolong Tulis pesan yang akan anda sampaikan...!'}}</div>@enderror
                       </div>
-                  </div>
-                  <div class="btnCfm">
-                    <button type="submit" class="btn btn-primary btn-group btn-lg d-inline " name="btn_post_Verify" id="btn_post_Verify">Submit
-                    </button>
-                    <button type="reset" class="btn btn-danger btn-group btn-lg d-inline " name="btnReset" id="btnReset">Reset</button>
-                  </div>
-              </form>
+                    </div>
+
+                    <div class="btnCfm ftco-animate">
+                      <button type="submit" class="btn btn-primary btn-group btn-lg d-inline " name="btn_post_Verify" id="btn_post_Verify">Kirim
+                      </button>
+                      <button type="reset" class="btn btn-danger btn-group btn-lg d-inline " name="btnReset" id="btnReset">Batalkan</button>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
             </div>
-          </div>
           </div>
         </div>
-      </div>
-		</div>
-	</section>
+  		</div>
+  	</section>
 
-	</div>
-  <div class="okok mt-4">
-    <!-- <h1>aaa</h1> -->
-
-<!-- <section class="ftco-section-parallax ftco-degree-bg">
-  <div class="parallax-img d-flex align-items-center">
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-10 text-center heading-section heading-section-white "> -->
-
-    <section class="ftco-section-parallax ftco-degree-bg">
+    <section class="ftco-section-parallax about ftco-degree-bg" id="about">
       <div class="parallax-img d-flex align-items-center">
           <div class="container">
-            <div class="row d-flex justify-content-center rabout">
-              <h1 class="sabout">
-                About Us
-              </h1>
-            </div>
-            <div class="row sjdl">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aut dolorum ipsum quam mollitia, dignissimos quibusdam veniam! Beatae iusto illum illo voluptatum, eaque at enim dolorum sequi temporibus reiciendis necessitatibus architecto doloremque nulla laudantium quidem dolore error id, adipisci, odio hic? Accusamus consequatur dolore consequuntur fugiat, provident possimus ipsam eum!</p>
+              <div class="row d-flex justify-content-center rabout ftco-animate">
+                <h1 class="sabout" id="HAbout">
+                  Tentang Kami
+                </h1>
+              </div>
+            <div class="row sjdl ftco-animate">
+              <p class="heading" id="pHAbout">
+              Global Multicash adalah platform berbasis technology informasi yang dijalankan oleh Sembilan Bola Dunia yang mengedepankan perlindungan konsumen dan memiliki risiko yang terkelola dengan baik.
+              </p>
             </div>
           </div>
       </div>

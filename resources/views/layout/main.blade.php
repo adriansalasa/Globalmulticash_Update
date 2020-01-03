@@ -42,16 +42,16 @@
           </button>
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="{{url('/')}}" class="nav-link clPage" id="hm">Home</a></li>
-              <li class="nav-item"><a href="{{url('#ourservices')}}" class="nav-link clPage" id="svc">Our Services</a></li>
-              <li class="nav-item"><a href="{{url('#apply')}}" class="nav-link clPage" id="happly">How to Apply</a></li>              
-              <li class="nav-item"><a href="{{url('#isiContactUS')}}" class="nav-link clPage" id="cntUS">Contact Us</a></li>
-              <li class="nav-item"><a href="{{url('#about')}}" class="nav-link clPage" id="abtUS">About Us</a></li>
+              <li class="nav-item active"><a href="{{url('/')}}" class="nav-link clPage" id="hm">Halaman Utama</a></li>
+              <li class="nav-item"><a href="{{url('#ourservices')}}" class="nav-link clPage" id="svc">Layanan</a></li>
+              <li class="nav-item"><a href="{{url('#apply')}}" class="nav-link clPage" id="happly">Cara Daftar</a></li>              
+              <li class="nav-item"><a href="{{url('#isiContactUS')}}" class="nav-link clPage" id="cntUS">Hubungi Kami</a></li>
+              <li class="nav-item"><a href="{{url('#about')}}" class="nav-link clPage" id="abtUS">Tentang kami</a></li>
 
               <div class="trans">
-                <ul class="selLang">
-                  <li class="Eng"><a href="#">EN</a></li>
+                <ul class="selLang">                  
                   <li class="Ind text-center"><a href="#">ID</a></li>
+                  <li class="Eng"><a href="#">EN</a></li>
                 </ul>
               </div>
 
