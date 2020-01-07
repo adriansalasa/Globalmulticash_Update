@@ -37,6 +37,7 @@
     scrollProperty: 'scroll'
   });
 
+	//Change active class when clicked
 	$('#ftco-nav .navbar-nav a').on('click', function(){ 
 		$('#ftco-nav .navbar-nav').find('li.active').removeClass('active');
 		$(this).parent('li').addClass('active');
