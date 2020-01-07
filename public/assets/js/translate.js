@@ -1,6 +1,6 @@
     // $('#hm').click(function(){
     //     if ($('#hidTranslate').val() == "0"){
-    //         location.reload(true);
+    //         location.reload();
     //     }else{
     //         toEng();
     //     }

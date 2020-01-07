@@ -20,3 +20,4 @@ Route::get('/', function(){
 
 Route::get('/EN', 'pagesController@index');
 Route::get('/ID', 'pagesController@tampil');
+Route::get('/Home', 'pagesController@index');

@@ -42,7 +42,7 @@
           </button>
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="{{url('#')}}" class="nav-link clPage" id="En_hm">Home</a></li>
+              <li class="nav-item active"><a href="{{url('/Home')}}" class="nav-link clPage" id="En_hm">Home</a></li>
               <li class="nav-item"><a href="{{url('#ourservices')}}" class="nav-link clPage" id="En_svc">Our Services</a></li>
               <li class="nav-item"><a href="{{url('#apply')}}" class="nav-link clPage" id="En_happly">How to Apply</a></li>              
               <li class="nav-item"><a href="{{url('#isiContactUS')}}" class="nav-link clPage" id="En_cntUS">Contact Us</a></li>
@@ -55,7 +55,7 @@
                   <!-- {{url('/En/index_EN.blade.php')}} -->
                 </ul>
               </div>
-            
+
 
 
 
