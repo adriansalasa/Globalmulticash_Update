@@ -18,4 +18,5 @@ Route::get('/', function(){
 	return view('index');
 });
 
-Route::get('/ID', 'pagesController@index');
+Route::get('/EN', 'pagesController@index');
+Route::get('/ID', 'pagesController@tampil');

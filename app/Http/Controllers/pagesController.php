@@ -14,8 +14,18 @@ class pagesController extends Controller
      */
     public function index()
     {
-        alert("kesini");
+       // return("kemari lah");
+        $lang = "langEng";
+        return view("En.index_EN", compact("lang"));
     }
+
+     public function tampil()
+    {
+       // return("kemari lah");        
+        return view("index");
+    }
+   
+
 
     /**
      * Show the form for creating a new resource.

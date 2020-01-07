@@ -289,9 +289,13 @@
 	counter();
 
 	var contentWayPoint = function() {
-		var i = 0;
-		$('.ftco-animate').waypoint( function( direction ) {
+		var i = 0;		
 
+		$('.ftco-animate').waypoint( function( direction ) {			
+			// if( $('#hidTranslate').val() == "1" ){
+			// 	// alert("yoi");
+			// 	direction = 'down';			 
+			// }			
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 				
 				i++;
@@ -315,10 +319,9 @@
 						},  k * 50, 'easeInOutExpo' );
 					});
 					
-				}, 100);					
-			}			
-
-		} , { offset: '95%' } );
+				}, 100);				
+			}				
+		} , { offset: '95%' } );		
 	};
 	contentWayPoint();
 
